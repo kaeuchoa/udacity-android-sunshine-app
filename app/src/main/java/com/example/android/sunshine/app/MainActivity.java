@@ -1,16 +1,18 @@
 package com.example.android.sunshine.app;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,15 @@ public class MainActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            ArrayList<String> dummyData = new ArrayList<>();
+            dummyData.add("Hoje - Ensolarado -  31/17");
+            dummyData.add("Amanhã - Nublado -  29/17");
+            dummyData.add("Quarta - Chuvoso -  28/16");
+            dummyData.add("Quinta - Ensolarado -  31/17");
+            dummyData.add("Sexta - Encoberto com Nuvens -  30/25");
+            dummyData.add("Sábado - Parcialmente Nublado -  28/18");
+            dummyData.add("Domingo - Chuvoso -  26/18");
+
             return rootView;
         }
     }
